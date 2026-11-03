@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/400-italic.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+@import "@fontsource/ibm-plex-mono/700.css";
+
+@theme {
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --color-bg: #0a0a12;
+  --color-bg-raised: #13131f;
+  --color-bg-sunken: #07070d;
+  --color-border: #262632;
+  --color-border-soft: #1b1b26;
+  --color-text: #e9e7f2;
+  --color-text-soft: #a9a7bd;
+
+  --color-accent: #8b6bff;
+  --color-accent-bright: #a689ff;
+  --color-accent-wash: #8b6bff1f;
+
+  --color-tag-violet: #8b6bff;
+  --color-tag-cyan: #5ec8e0;
+  --color-tag-green: #5fe28a;
+  --color-tag-amber: #f0c674;
+  --color-tag-rose: #ff7eb6;
+  --color-tag-orange: #ff9a5e;
+
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 12px 28px -12px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 0 1px var(--color-accent-wash), 0 8px 24px -8px rgba(139, 107, 255, 0.25);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-raised);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border: 3px solid var(--color-bg-raised);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-soft);
+}
+* {
+  scrollbar-color: var(--color-border) var(--color-bg-raised);
+}
+
+.font-mono-tight {
+  font-feature-settings: "tnum" 1;
+}
+
+/* Faint circuit-grid texture — material of the "vault" world, not decoration. */
+.grid-texture {
+  position: relative;
+  isolation: isolate;
+}
+.grid-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  background-image:
+    linear-gradient(to right, var(--color-border-soft) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border-soft) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse 80% 60% at 70% 0%, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 70% 0%, black 40%, transparent 85%);
+}
+
+.nav-fade {
+  mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+}
+@media (min-width: 640px) {
+  .nav-fade {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
