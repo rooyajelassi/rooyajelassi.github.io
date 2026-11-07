@@ -44,7 +44,7 @@ export function History() {
       <Container>
         <SectionHeading
           title="history"
-          lede="Experience, education, and record of distinction — read in order, the way a reviewer would."
+          lede="Experience, education, and record of distinction."
         />
 
         <div className="grid gap-12 md:grid-cols-2">
