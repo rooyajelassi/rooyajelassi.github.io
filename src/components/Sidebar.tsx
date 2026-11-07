@@ -6,7 +6,7 @@ import { useActiveSection } from "../lib/useActiveSection";
 
 const SECTIONS = [
   { id: "summary", label: "summary", count: null as number | null },
-  { id: "case-history", label: "case_history", count: experience.length + education.length + awards.length },
+  { id: "history", label: "history", count: experience.length + education.length + awards.length },
   { id: "exhibits", label: "exhibits", count: projects.length },
   { id: "attachments", label: "attachments", count: certifications.length + Object.keys(skills).length },
   { id: "contact", label: "contact", count: null },

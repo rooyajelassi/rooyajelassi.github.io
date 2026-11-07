@@ -38,12 +38,12 @@ function TimelineBlock({ entries }: { entries: Entry[] }) {
   );
 }
 
-export function CaseHistory() {
+export function History() {
   return (
-    <section id="case-history" className="border-b py-16 sm:py-24" style={{ borderColor: "var(--color-border)" }}>
+    <section id="history" className="border-b py-16 sm:py-24" style={{ borderColor: "var(--color-border)" }}>
       <Container>
         <SectionHeading
-          title="case_history"
+          title="history"
           lede="Experience, education, and record of distinction — read in order, the way a reviewer would."
         />
 

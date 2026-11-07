@@ -1,10 +1,10 @@
 import { Attachments } from "./components/Attachments";
-import { CaseHistory } from "./components/CaseHistory";
 import { Contact } from "./components/Contact";
 import { Exhibits } from "./components/Exhibits";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { History } from "./components/History";
 import { Sidebar } from "./components/Sidebar";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Header />
         <main>
           <Hero />
-          <CaseHistory />
+          <History />
           <Exhibits />
           <Attachments />
           <Contact />

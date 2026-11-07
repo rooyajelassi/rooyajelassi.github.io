@@ -4,6 +4,7 @@ import portreconScan from "../assets/screenshots/portrecon-scan.webp";
 import myvetSwagger from "../assets/screenshots/myvet-swagger.webp";
 import zsecurityImg from "../assets/certs/zsecurity-certificate.webp";
 import artFactoryImg from "../assets/certs/art-factory-certificate.webp";
+import aiesecImg from "../assets/certs/aiesec-certificate.webp";
 
 export const profile = {
   name: "Rooya Jelassi",
@@ -61,7 +62,6 @@ export const education: Entry[] = [
       "Coursework: Algorithms & Programming, OOP, Database Design, Networking Fundamentals, Linux System Administration, Web Services, Information Assurance & Security, Artificial Intelligence.",
       "In progress: Machine Learning, Cloud Computing. GPA (last 3 semesters): 3.04/4.0.",
       "Final-year project (PFE): 6-month offensive-security internship starting Jan/Feb 2027, supervised by the Head of the IT Department.",
-      "Currently applying to the Master's Degree in Cybersecurity, University of Padua (A.Y. 2027/28).",
     ],
   },
   {
@@ -194,6 +194,7 @@ export type Certification = {
 export const certifications: Certification[] = [
   { name: "Learn Hacking Using the Cloud From Scratch", issuer: "zSecurity", date: "Aug 2026", image: zsecurityImg },
   { name: "Certificate of Membership — President", issuer: "Art Factory, Tunis Business School", date: "2024 – 2025", image: artFactoryImg },
+  { name: "Leadership Development Experience — Global Volunteer", issuer: "AIESEC", date: "Aug 2024", image: aiesecImg },
   { name: "Penetration Testing (CPTS path)", issuer: "Hack The Box Academy", date: "In progress — halfway" },
 ];
 

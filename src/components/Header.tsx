@@ -4,7 +4,7 @@ import { Seal } from "./Seal";
 
 const TABS = [
   { id: "summary", label: "summary" },
-  { id: "case-history", label: "case_history" },
+  { id: "history", label: "history" },
   { id: "exhibits", label: "exhibits" },
   { id: "attachments", label: "attachments" },
   { id: "contact", label: "contact" },
